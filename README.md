@@ -22,7 +22,7 @@ Given a topic, question, or design problem, the plugin's conductor-facing skill:
 A named model-binding (no persona) resolvable as `code-dialectic/dialectician` anywhere roles are used (e.g. `spawn_instance`'s `model` arg). It's bound to the `powerful` capability tier by default. Stance (Thesis/Antithesis) comes entirely from the conductor's prompts each round, not from the role itself.
 
 - **Enable**: Settings → Plugins.
-- **Rebind the tier/model**: Settings → Models → Roles (shown with a "via code-dialectic" badge).
+- **Model binding**: the `dialectician` role is **visible** in Settings → Models → Roles with a "via code-dialectic" badge, but it is **read-only** there — not user-rebindable or deletable. To change its model binding, edit `roles[].binding` in `conductor.plugin.json` and re-enable the plugin.
 
 ## Technical description
 

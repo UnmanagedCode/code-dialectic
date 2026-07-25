@@ -11,7 +11,7 @@ Run a rigorous two-worker dialectic on the topic or problem the user provides as
 From `$ARGUMENTS`, write one precise, falsifiable **proposition** the dialectic will test. If the topic is vague, or it's a code/architecture question tied to a specific repo, ask the user one clarifying question (scope + which project) — do not guess.
 Pick a project to spawn into:
 - A code/design question about a specific repo → spawn into that project (workers may read its code).
-- A purely conceptual question → spawn into a scratch project (e.g. `tmp`).
+- A purely conceptual question → spawn into an existing scratch project, or create one (e.g. via `create_project`) if none exists yet.
 
 ## 2. Spawn two dialecticians
 Spawn **two** workers:
