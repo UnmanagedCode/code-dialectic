@@ -1,0 +1,14 @@
+{
+  "id": "code-dialectic",
+  "name": "Code Dialectic",
+  "version": "0.1.0",
+  "pluginApi": 1,
+  "roles": [
+    {
+      "slug": "dialectician",
+      "name": "Dialectician",
+      "binding": { "kind": "tier", "tier": "powerful" }
+    }
+  ],
+  "claudePlugin": "."
+}
