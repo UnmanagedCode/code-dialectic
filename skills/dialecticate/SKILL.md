@@ -28,6 +28,7 @@ Spawn **two** workers:
 > 5. **End every turn with a STANCE SUMMARY** (≤5 lines): current position, concessions, open disputes.
 > 6. **Stay on the proposition** — no goalpost-shifting.
 > 7. **No premature consensus** — surface real disagreement before synthesis.
+> 8. **Do not modify files** — you reason about the artifact, never change it. Read only; argue from the state as given.
 >
 > Proposition: <the proposition>
 
@@ -41,7 +42,7 @@ Drive every turn via dispatch-and-wake: `send_prompt({sessionId, subscribe:true}
 Default **3 rounds** (offer the user more/fewer). Each round is a pair of turns. Relay outputs between the workers: paste the opponent's latest turn verbatim into the other's next prompt, prefixed `Opponent's last turn:`, and re-state the rules block (rules drift if omitted).
 - R1: Thesis → wake → relay → Antithesis → wake.
 - R2: relay → Thesis refines (concede + defend) → wake → relay → Antithesis counters → wake.
-- R3: same. Each round must escalate depth — new arguments, not repetition.
+- R3: same. Each round must escalate depth — engage the opponent's strongest surviving claim (the crux), not a fresh peripheral point; new arguments, not repetition.
 Before each relay, confirm the worker ended with a STANCE SUMMARY; if not, ask it to add one before continuing.
 
 ## 5. Termination
