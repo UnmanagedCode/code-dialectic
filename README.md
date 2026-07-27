@@ -52,3 +52,8 @@ The skill never authors arguments itself — it drives two `dialectician` worker
 
 - **Cost scales with rounds × 2 workers** — each round is a full turn from both Thesis and Antithesis, so a longer dialectic (or a "be exhaustive" request) multiplies spawn/prompt cost accordingly.
 - **The role is a model-binding only** — `dialectician` carries no persona or system prompt; all stance-taking (Thesis vs. Antithesis) and rule enforcement comes from the conductor's prompts, not the role itself.
+
+## License
+
+This project is licensed under the GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later).
+© 2026 UnmanagedCode. See [LICENSE](LICENSE) for details.

@@ -2,5 +2,6 @@
   "name": "code-dialectic",
   "description": "Structured dialectic (thesis → antithesis → synthesis) between two Dialectician-role workers.",
   "version": "0.1.0",
-  "author": { "name": "UnmanagedCode" }
+  "author": { "name": "UnmanagedCode" },
+  "license": "AGPL-3.0-or-later"
 }
