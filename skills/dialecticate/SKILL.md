@@ -5,7 +5,7 @@ description: Run a structured dialectic (thesis → antithesis → synthesis) be
 
 # Dialecticate
 
-Run a rigorous two-worker dialectic on the topic or problem the user provides as `$ARGUMENTS`. You (the conductor) orchestrate; the two `dialectician` workers do the reasoning. Never author the arguments yourself.
+Run a rigorous two-worker dialectic on the topic or problem the user provides as `$ARGUMENTS`. Never author the arguments yourself — the two `dialectician` workers do the reasoning.
 
 ## 1. Frame
 From `$ARGUMENTS`, write one precise, falsifiable **proposition** the dialectic will test. If the topic is vague, or it's a code/architecture question tied to a specific repo, ask the user one clarifying question (scope + which project) — do not guess.
@@ -35,7 +35,7 @@ Then assign stance:
 - **Thesis** (R1): "You are the Thesis advocate. Make the strongest possible case *for* the proposition."
 - **Antithesis** (R1): "You are the Antithesis advocate. Attack the thesis — flaws, counterexamples, hidden assumptions — and make the strongest case *against* the proposition."
 
-Drive every turn via dispatch-and-wake: `send_prompt({sessionId, subscribe:true})`, then **end your turn**. Never hold your turn open while a worker runs. Resubscribe on each wake while rounds remain.
+Drive each round via dispatch-and-wake (subscribe + end your turn, never `wait:true`), resubscribing while rounds remain.
 
 ## 4. Round cadence (relay)
 Default **3 rounds** (offer the user more/fewer). Each round is a pair of turns. Relay outputs between the workers: paste the opponent's latest turn verbatim into the other's next prompt, prefixed `Opponent's last turn:`, and re-state the rules block (rules drift if omitted).
